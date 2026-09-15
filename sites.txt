@@ -1,12 +1,5 @@
-# One hostname per line. Replace everything below with your own sites.
-#
-# All of these forms work - the loader cleans them up:
-#   example.wuaze.com
-#   http://example.kesug.com
-#   https://example.is-best.net/some/page
-# Blank lines, lines starting with #, and junk without a dot are skipped.
-#
-# Keep ONLY sites whose InfinityFree client area you can actually log into.
-# An alert about a site you cannot reactivate is noise, and every extra dead
-# domain is one more pointless request at the host.
-
+abelcarlos.great-site.net
+atedupmondo.lovestoblog.com
+elmnewshuckle.kesug.com
+journalwallstreet.lovestoblog.com
+samuelstanbury.is-great.net
