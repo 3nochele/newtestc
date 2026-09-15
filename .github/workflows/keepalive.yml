@@ -65,10 +65,10 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
 
-      - name: Install Playwright with Chromium
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install playwright
+          pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
       # Real traffic does not arrive at 04:17 sharp every time. Each shard waits
