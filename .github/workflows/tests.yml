@@ -1,0 +1,45 @@
+name: Tests
+
+# The classifier is the one thing that must never be wrong: a false "alive"
+# lets an account die quietly, and a false "dead" hides real losses in noise.
+on:
+  push:
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/tests.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      # Playwright's Python package only; no browser download needed, the tests
+      # never launch one.
+      - run: pip install -r requirements.txt
+
+      - run: python scripts/test_classify.py
+
+      # The plugin goes on every site at once, and a PHP parse error in an
+      # active plugin can white-screen a whole site.
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Lint the plugin
+        run: php -l wp-plugin/gh-keepalive/gh-keepalive.php
+
+      # Both configurations: the shipped default with no limits, and the
+      # optional guards switched on via wp-config.
+      - name: Plugin logic tests (no limits, the default)
+        run: php wp-plugin/test_plugin.php unlimited
+
+      - name: Plugin logic tests (guards switched on)
+        run: php wp-plugin/test_plugin.php limited
