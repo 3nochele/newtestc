@@ -1,0 +1,19 @@
+GHKA_TOKEN
+==========
+
+j_8mg4-DFSmCEqM6bz3GgAeaAIb_INzCS7bwMt8Ux0I
+
+Already set in wp-plugin/gh-keepalive/gh-keepalive.php and baked into
+wp-plugin/gh-keepalive.zip.
+
+STILL TO DO BY HAND (nothing else works without it):
+  GitHub repo -> Settings -> Secrets and variables -> Actions
+  -> New repository secret
+     Name:   GHKA_TOKEN
+     Secret: j_8mg4-DFSmCEqM6bz3GgAeaAIb_INzCS7bwMt8Ux0I
+
+KEEP THE REPOSITORY PRIVATE. This value sits in the plugin file, so a public
+repo would publish it.
+
+If the workflow reports "bad_token" for a site, that site has an older copy of
+the plugin. Reinstall the zip there.

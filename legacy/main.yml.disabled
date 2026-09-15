@@ -1,0 +1,39 @@
+name: Monthly Site Ping with Report
+
+on:
+  schedule:
+    - cron: '0 0 */6 * *' 
+  workflow_dispatch: 
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    # এই নিচের ২ লাইন যোগ করলে ওই ওয়ার্নিংটি চলে যাবে
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        run: python ping_sites.py
+
+      - name: Commit and Push Report
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git add report.csv detailed_status.csv
+          git commit -m "Update Site Status Reports" || exit 0
+          git pull --rebase origin main 
+          git push origin main
