@@ -1,6 +1,6 @@
 host,first_seen,last_alive,last_verdict,last_checked,consecutive_fail,down_since,total_checks,total_alive,plugin_state,plugin_posts,plugin_rendered
-abelcarlos.great-site.net,2026-09-15 11:34:08,2026-09-15 11:34:08,ALIVE,2026-09-15 11:34:08,0,,1,1,absent,,
-atedupmondo.lovestoblog.com,2026-09-15 11:34:08,2026-09-15 11:34:08,ALIVE,2026-09-15 11:34:08,0,,1,1,published,4,ok
-elmnewshuckle.kesug.com,2026-09-15 11:34:08,2026-09-15 11:34:08,ALIVE,2026-09-15 11:34:08,0,,1,1,published,5,ok
-journalwallstreet.lovestoblog.com,2026-09-15 11:34:08,2026-09-15 11:34:08,ALIVE,2026-09-15 11:34:08,0,,1,1,published,5,ok
-samuelstanbury.is-great.net,2026-09-15 11:34:08,2026-09-15 11:34:08,ALIVE,2026-09-15 11:34:08,0,,1,1,published,4,ok
+abelcarlos.great-site.net,2026-09-15 11:34:08,2026-09-16 09:40:38,ALIVE,2026-09-16 09:40:38,0,,2,2,absent,,
+atedupmondo.lovestoblog.com,2026-09-15 11:34:08,2026-09-16 09:40:38,ALIVE,2026-09-16 09:40:38,0,,2,2,published,5,ok
+elmnewshuckle.kesug.com,2026-09-15 11:34:08,2026-09-16 09:40:38,ALIVE,2026-09-16 09:40:38,0,,2,2,published,6,ok
+journalwallstreet.lovestoblog.com,2026-09-15 11:34:08,2026-09-16 09:40:38,ALIVE,2026-09-16 09:40:38,0,,2,2,published,6,ok
+samuelstanbury.is-great.net,2026-09-15 11:34:08,2026-09-16 09:40:38,ALIVE,2026-09-16 09:40:38,0,,2,2,published,5,ok
