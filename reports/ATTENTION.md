@@ -1,6 +1,6 @@
 # Sites needing attention
 
-Generated 2026-10-06 11:45:17 UTC
+Generated 2026-10-11 11:15:12 UTC
 
 | bucket | count | meaning |
 |---|---|---|
